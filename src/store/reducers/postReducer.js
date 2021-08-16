@@ -1,4 +1,4 @@
-import { FETCH_POSTS, NEW_POSTS } from "../../actions/types";
+import { FETCH_POSTS, NEW_POSTS } from "../actions/types";
 
 const initialState = {
   items: [],
@@ -12,6 +12,12 @@ export default function (state = initialState, action) {
       return {
         ...state,
         items: action.payload
+      };
+    case NEW_POSTS:
+      console.log("reducer a new post")
+      return {
+        ...state,
+        item: action.payload
       };
     default:
       return state;

@@ -11,4 +11,18 @@ export const fetchPosts = () => dispatch => {
       payload: res.data,
     }))
     .catch(err => console.log(err))
-}
+};
+
+export const createPost = (postData) => dispatch => {
+  console.log("creating post")
+  axios.post("https://jsonplaceholder.typicode.com/posts/", postData)
+    .then(post =>
+      dispatch({
+        type: NEW_POSTS,
+        payload: post.data
+      }))
+    .catch(function (error) {
+      console.log(error);
+    })
+
+};
