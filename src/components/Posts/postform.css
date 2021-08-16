@@ -1,0 +1,16 @@
+.PostForm__form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 20px;
+  border: solid 1px grey;
+  padding: 15px;
+}
+h4 {
+  text-align: center;
+  text-decoration: underline;
+  margin-top: -10px;
+}
+input {
+  margin-bottom: 15px;
+}
